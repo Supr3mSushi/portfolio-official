@@ -60,7 +60,7 @@ body {
 }
 
 .navbar a.active::before {
-    content: '';
+    /*content: '';*/
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -216,4 +216,8 @@ section {
     border-right: 384px solid var(--main-color);
     border-bottom: 384px solid var(--main-color) ;
     border-left: 384px solid transparent;
+}
+
+.home .profession .overlay{
+    animation: rotate 10s linear infinite;
 }
