@@ -11,7 +11,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* Path: style.css */
+/* Style */
 
 :root {
     --bg-color: #fdfdfd;
@@ -90,7 +90,7 @@ section {
 }
 
 .home-content h3 {
-    font-size: 3.2rem;
+    font-size: 5.6rem;
     font-weight: 700;
     line-height: .3;
 }
@@ -180,7 +180,7 @@ section {
 }
 
 .home .profession-box .profession:nth-child(1) i {
-    margin-right: 15px;
+    margin-right: 50px;
 
 }
 
@@ -220,4 +220,48 @@ section {
 
 .home .profession .overlay{
     animation: rotate 10s linear infinite;
+}
+
+.home-img img {
+    position: absolute;
+    bottom: -97px;
+    right: 55px;
+    width: 38%;
+    pointer-events: none;
+
+}
+
+span {
+    color: var(--main-color);
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    background: red;
+}
+
+.about-img img {
+    width: 35vw;
+}
+
+.heading {
+    font-size: 4.5rem;
+    text-align: center;
+}
+
+.about-content {
+    text-after: left;
+    line-height: 1.2;
+}
+
+.about-content h3 {
+    font-size: 2rem;
+}
+
+.about-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
 }
