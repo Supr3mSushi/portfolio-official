@@ -304,8 +304,8 @@ span {
     line-height: 1.2;
 }
 
-.about-content h3 {
-    font-size: 2rem;
+.about-content h2 {
+    font-size: 6rem;
 }
 
 .about-content p {
@@ -313,22 +313,59 @@ span {
     margin: 2rem 0 3rem;
 }
 
+.projects-main-section {
+    padding-bottom: 10rem;
+}
 
-.skills {
+.projects-main-section h2 {
+    margin-bottom: 4rem;
+}
+
+.projects-main-section .projects-container-class {
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.projects-container-class .projects-box-class {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#skills {
     padding-bottom: 50px;
 }
 
-.skills h2 {
-    font-family: 'Raleway', sans-serif;
+#skills h2 {
     text-align: center;
-    color: var(--white-color);
-    font-size: 40px;
-    background-color: transparent;
+    font-size: 6rem;
     margin: 0 0 30px 0;
     /* z-index: 99999 */
 }
 
-.skills .competences_bloc {
+#skills .skill-bloc {
     margin-top: 60px;
     min-width: 680px;
     -webkit-box-flex: 1;
@@ -342,7 +379,7 @@ span {
     display: block;
 }
 
-.skills .competences_separator {
+#skills .skills-separator {
     background-color: #7D7D7D;
     width: 7px;
     margin-left: 45px;
@@ -352,15 +389,12 @@ span {
     height: auto;
 }
 
-.skills .competences_bloc h2 {
-    font-family: 'Raleway', sans-serif;
+#skills .skill-bloc h2 {
     text-align: center;
-    color: white;
     font-size: 35px;
-    background-color: transparent
 }
 
-.skills .competences_bloc .techno_bloc {
+#skills .skill-bloc .gif-bloc {
     -webkit-box-flex: 6;
     -ms-flex: 6;
     flex: 6;
@@ -370,15 +404,15 @@ span {
 }
 
 
-#skills .competences_bloc .skills_picture {
-    margin:auto;
+#skills .skill-bloc .skills-picture {
+    margin: auto;
     height: 150px;
     width: auto;
     margin-left: 20px;
     margin-right: 20px
 }
 
-#skills .competences_bloc .projects-container {
+#skills .skill-bloc .projects-container {
 
     margin: auto;
     padding-bottom: 20px;
@@ -394,7 +428,7 @@ span {
     justify-content: space-around
 }
 
-#skills .competences_bloc .projects-container .project-block {
+#skills .skill-bloc .projects-container .project-block {
     cursor: default;
     height: 210px;
     width: 170px;
@@ -415,13 +449,13 @@ span {
     padding-bottom: 3px;
 }
 
-#skills .competences_bloc .projects-container .project-block .project-block-logo {
+#skills .skill-bloc .projects-container .project-block .project-block-logo {
     margin-left: auto;
     margin-right: auto;
     margin-top: 35px
 }
 
-#skills .competences_bloc .projects-container .project-block .project-block-logo .project-logo-test {
+#skills .skill-bloc .projects-container .project-block .project-block-logo .project-logo-test {
     height: 70px;
     width: auto;
     -webkit-filter: grayscale(1);
@@ -432,39 +466,36 @@ span {
     transition: filter 0.30s ease-out, -webkit-filter 0.30s ease-out, height 0.7s ease-out
 }
 
-#skills .competences_bloc .projects-container .project-block .project-block-title {
+#skills .skill-bloc .projects-container .project-block .project-block-title {
     -webkit-transition: color 0.30s ease-out;
     -o-transition: color 0.30s ease-out;
     transition: color 0.30s ease-out;
     margin-top: 9px;
-    color: white;
+    color: var(--main-color);
     font-size: 26px;
     margin-bottom: 0;
-    font-family: 'Raleway', sans-serif;
     text-align: center;
     font-weight: bold;
-    transition: font-size ease-out;
 }
 
-#skills .competences_bloc .projects-container .project-block .project-block-subtitle {
+#skills .skill-bloc .projects-container .project-block .project-block-subtitle {
     margin: auto;
 }
 
-#skills .competences_bloc .projects-container .project-block .project-subtitle {
+#skills .skill-bloc .projects-container .project-block .project-subtitle {
     -webkit-transition: color 0.30s ease-out;
     -o-transition: color 0.30s ease-out;
     transition: color 0.30s ease-out;
     margin:auto;
-    color: #404040;
+    color: var(--main-color);
     font-size: 12px;
-    font-family: 'Raleway', sans-serif;
     text-align: center;
     font-weight: bold;
     visibility: hidden;
     margin-block-end: 0.4em;
 }
 
-#skills .competences_bloc .projects-container .project-block .project-block-button {
+#skills .skill-bloc .projects-container .project-block .project-block-button {
     cursor: pointer;
     height: 11%;
     width: 65%;
@@ -475,11 +506,11 @@ span {
     transition:visibility 0.4s ease-out,opacity 0.4s ease-out;
     margin: auto;
     display: flex;
-    box-shadow: 0px 3px 0px 0px #646464;
+    box-shadow: 0 3px 0 0 var(--shadow-color);
 }
 
-#skills .competences_bloc .projects-container .project-block .project-block-button .project-button-title {
-    background-color: #343434;
+#skills .skill-bloc .projects-container .project-block .project-block-button .project-button-title {
+    background-color: var(--main-color);
     width: 70%;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -488,18 +519,17 @@ span {
     justify-content: center;
 }
 
-#skills .competences_bloc .projects-container .project-block .project-block-button .project-button-title h4{
+#skills .skill-bloc .projects-container .project-block .project-block-button .project-button-title h4{
     font-weight: normal;
-    color: white;
-    font-family: 'Raleway', sans-serif;
+    color: var(--white-color);
     font-size: 11px;
     opacity:0;
     transition:visibility 0.4s ease-out,opacity 0.4s ease-out;
     margin: 0;
 }
 
-#skills .competences_bloc .projects-container .project-block .project-block-button .project-button-img{
-    background-color: #404040;
+#skills .skill-bloc .projects-container .project-block .project-block-button .project-button-img{
+    background-color: var(--main-color);
     width: 30%;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -508,25 +538,28 @@ span {
     justify-content: center;
 }
 
-#skills .competences_bloc .projects-container .project-block .project-block-button .project-button-img .button-img{
+#skills .skill-bloc .projects-container .project-block .project-block-button .project-button-img .button-img{
     height: auto;
     width: 55%;
 }
 
+#skills .skill-bloc .projects-container .project-block .project-block-button .project-button-img .button-img .project-button-title:hover {
+    background: transparent;
+    color: var(--main-color);
+    box-shadow: 0 3px 0 0 var(--shadow-color);
+    border-color: var(--main-color);
+}
 
-
-#skills .competences_bloc .projects-container .project-block .project-block-button:hover > .project-button-title{
-    /* background-color: #505050;     */
-    background-color: #D97634;
+#skills .skill-bloc .projects-container .project-block .project-block-button:hover > .project-button-title{
+    background: var(--main-color);
 }
-#skills .competences_bloc .projects-container .project-block .project-block-button:hover > .project-button-img{
-    /* background-color: #606060;     */
-    background-color: #D97634;
+#skills .skill-bloc .projects-container .project-block .project-block-button:hover > .project-button-img{
+    background: var(--main-color);
 }
-#skills .competences_bloc .projects-container .project-block .project-block-button:hover{
-    box-shadow: #606060;
+#skills .skill-bloc .projects-container .project-block .project-block-button:hover{
+    box-shadow: var(--shadow-color);
 }
-#skills .competences_bloc .projects-container .project-block .project-block-button:active {
+#skills .skill-bloc .projects-container .project-block .project-block-button:active {
     transform: translateY(3px);
     box-shadow: none;
 }
@@ -534,22 +567,22 @@ span {
 
 
 
-#skills .competences_bloc .projects-container .project-block.move-to-right {
-    background-color: #C8C8C8;
+#skills .skill-bloc .projects-container .project-block.move-to-right {
+    background: var(--bg-color);
     z-index: 1;
     transform: scale(1.7) translateX(23%);
     opacity: 100%;
 }
 
-#skills .competences_bloc .projects-container .project-block.move-to-left {
-    background-color: #C8C8C8;
+#skills .skill-bloc .projects-container .project-block.move-to-left {
+    background: var(--bg-color);
     z-index: 1;
     transform: scale(1.7) translateX(-23%);
     opacity: 100%;
 }
 
-#skills .competences_bloc .projects-container .project-block.move-to-face {
-    background-color: #C8C8C8;
+#skills .skill-bloc .projects-container .project-block.move-to-face {
+    background: var(--bg-color);
     z-index: 1;
     transform: scale(1.7);
     opacity: 100%;
@@ -564,33 +597,33 @@ span {
 }
 
 
-#skills .competences_bloc .projects-container .project-block:hover .project-block-logo .project-logo-test {
+#skills .skill-bloc .projects-container .project-block:hover .project-block-logo .project-logo-test {
     -webkit-filter: grayscale(0);
     filter: grayscale(0);
     height: 35px
 }
 
-#skills .competences_bloc .projects-container .project-block:hover .project-block-title {
+#skills .skill-bloc .projects-container .project-block:hover .project-block-title {
     color: #404040;
     font-size: 20px;
 }
 
-#skills .competences_bloc .projects-container .project-block:hover .project-subtitle {
+#skills .skill-bloc .projects-container .project-block:hover .project-subtitle {
     color: #404040;
     visibility: visible
 }
 
-#skills .competences_bloc .projects-container .project-block:hover .project-block-button {
+#skills .skill-bloc .projects-container .project-block:hover .project-block-button {
     /* visibility:visible; */
     opacity:1;
 }
 
-#skills .competences_bloc .projects-container .project-block:hover .project-block-button .project-button {
+#skills .skill-bloc .projects-container .project-block:hover .project-block-button .project-button {
     /* visibility: visible; */
     opacity:1;
 }
 
-#skills #competences-sections {
+#skills #skill-sections {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -598,15 +631,16 @@ span {
     flex-wrap: wrap
 }
 
+/*
 @media screen and (max-width: 700px) {
-    #skills .competences_bloc .skills_picture {
-        /* display: none */
+    #skills .skill-bloc .skills-picture {
+        display: none;
         height: 80px;
     }
-    #skills .competences_bloc {
+    #skills .compete.ces_bloc {
         min-width: 100px
     }
-    #skills #competences-sections {
+    #skills #skill-sections {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -615,12 +649,12 @@ span {
 }
 
 @media screen and (max-width: 1473px) {
-    #skills .competences_separator {
-        background-color: #404040
+    #skills .skills_separator {
+        background: var(--main-color)
     }
 }
 @media screen and (max-width: 1370px) {
-    #skills .competences_separator {
+    #skills .skills-separator {
         display: none
     }
-}
+}*/
