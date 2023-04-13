@@ -163,6 +163,8 @@ section {
     transition: .5s ease;
     letter-spacing: .1rem;
     border: .2rem solid transparent;
+    gap: 1rem;
+    align-items: center;
 }
 
 .btn:hover {
