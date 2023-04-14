@@ -203,8 +203,10 @@ section {
     top: 50%;
     right: 0;
     transform: translateY(-50%);
-    width: 50%;
-    height: 100%;
+    width: 768px;
+    height: 768px;
+    /*width: 50%;
+    height: 100%;*/
     overflow: hidden;
     pointer-events: none;
 }
@@ -213,8 +215,10 @@ section {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 768px;
+    height: 768px;
+    /*width: 100%;
+    height: 100%;*/
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -250,14 +254,14 @@ section {
     flex-direction: column;
     color: var(--main-color);
     transform: rotate(calc(360deg / 4 * var(--i)));
-    transform-origin: 208%;
+    transform-origin: 384px; /*transform-origin: 208%;*/
     background: var(--bg-color);
     padding: 13px 0;
     text-align: center;
 }
 
 .home .profession-box .profession:nth-child(1) i {
-    margin-right: 50px;
+    margin-right: 15px;
 
 }
 
