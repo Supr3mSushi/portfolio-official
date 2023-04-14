@@ -311,10 +311,10 @@ transform: rotate(90deg) translateY(-410px) rotate(90deg)
     right: 0;
     width: 0;
     height: 0;
-    border-top: 480px solid var(--main-color);
+    /*border-top: 480px solid var(--main-color);
     border-right: 457px solid var(--main-color);
     border-bottom: 457px solid var(--main-color) ;
-    border-left: 457px solid transparent;
+    border-left: 457px solid transparent;*/
 }
 
 .home .profession .overlay{
@@ -448,6 +448,65 @@ span {
 .projects-first-layer a i {
     font-size: 2rem;
     color: #333;
+}
+
+.projects-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.projects-modal-content {
+    position: relative;
+    background-color: var(--bg-color);
+    padding: 1.5rem;
+    border-radius: .5rem;
+
+}
+
+.projects-modal-project {
+    row-gap: 1rem;
+}
+
+.projects-modal-project {
+    display: flex;
+    gap: 10px;
+}
+
+.projects-modal-title {
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+.projects-modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.projects-modal-icon {
+    color: var(--main-color);
+    margin-right: .25rem;
+}
+
+/* Active Modal */
+.active-modal {
+    opacity: 1;
+    visibility: visible;
 }
 
 
