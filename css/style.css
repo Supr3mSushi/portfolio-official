@@ -245,7 +245,6 @@ section {
 }
 
 
-
 .home .profession-box .profession {
     position: absolute;
     left: 0;
@@ -267,23 +266,23 @@ section {
 
 .home .profession-box .profession:nth-child(2),
 .home .profession-box .profession:nth-child(4) {
-    padding-bottom: 20px;
+    padding-bottom: 25px;
 }
 
 .home .profession-box .profession:nth-child(1) {
-    transform: rotate(90deg) translate(0) rotate(-90deg);
+    transform: rotate(90deg) translate(0) translateY(-20px) rotate(-90deg);
 }
 
 .home .profession-box .profession:nth-child(2) {
-transform: rotate(90deg) translateY(-410px) rotate(90deg)
+transform: rotate(90deg) translate(0) translateY(40px) rotate(90deg)
 }
 
 .home .profession-box .profession:nth-child(3) {
-    transform: rotate(360deg) translateY(40px) rotate(-270deg);
+    transform: rotate(360deg) translate(40px) rotate(-270deg);
 }
 
 .home .profession-box .profession:nth-child(4) {
-    transform: rotate(270deg) translate(0) rotate(-360deg);
+    transform: rotate(270deg) translate(8px) rotate(-360deg);
 }
 
 
@@ -299,8 +298,8 @@ transform: rotate(90deg) translateY(-410px) rotate(90deg)
 }
 
 .home .profession-box .circle {
-    width: 78%;
-    height: 78%;
+    width: 584px;
+    height: 584px;
     border: 3px solid var(--main-color);
     border-radius: 50%;
 }
@@ -311,10 +310,10 @@ transform: rotate(90deg) translateY(-410px) rotate(90deg)
     right: 0;
     width: 0;
     height: 0;
-    /*border-top: 480px solid var(--main-color);
-    border-right: 457px solid var(--main-color);
-    border-bottom: 457px solid var(--main-color) ;
-    border-left: 457px solid transparent;*/
+    border-top: 384px solid var(--main-color);
+    border-right: 384px solid var(--main-color);
+    border-bottom: 384px solid var(--main-color) ;
+    border-left: 384px solid transparent;
 }
 
 .home .profession .overlay{
@@ -443,11 +442,12 @@ span {
     background: var(--white-color);
     border-radius: 50%;
     gap: 0.6rem;
+    margin-top: 1rem;
 }
 
 .projects-first-layer a i {
     font-size: 2rem;
-    color: #333;
+    color: var(--main-color);
 }
 
 .projects-modal {
