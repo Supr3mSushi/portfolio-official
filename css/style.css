@@ -203,10 +203,10 @@ section {
     top: 50%;
     right: 0;
     transform: translateY(-50%);
-    width: 768px;
-    height: 768px;
-    /*width: 50%;
-    height: 100%;*/
+    /*width: 768px;
+    height: 768px;*/
+    width: 50%;
+    height: 100%;
     overflow: hidden;
     pointer-events: none;
 }
@@ -214,11 +214,11 @@ section {
 .home .profession-container .profession-box {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 768px;
-    height: 768px;
-    /*width: 100%;
-    height: 100%;*/
+    left: 10%;
+    /*width: 768px;
+    height: 768px;*/
+    width: 80%;
+    height: 100%;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -245,7 +245,6 @@ section {
 }
 
 
-
 .home .profession-box .profession {
     position: absolute;
     left: 0;
@@ -267,23 +266,23 @@ section {
 
 .home .profession-box .profession:nth-child(2),
 .home .profession-box .profession:nth-child(4) {
-    padding-bottom: 20px;
+    padding-bottom: 25px;
 }
 
 .home .profession-box .profession:nth-child(1) {
-    transform: rotate(90deg) translate(0) rotate(-90deg);
+    transform: rotate(90deg) translate(-20px) rotate(-90deg);
 }
 
 .home .profession-box .profession:nth-child(2) {
-transform: rotate(90deg) translateY(-410px) rotate(90deg)
+transform: rotate(90deg) translate(10px) translateY(25px) rotate(90deg);
 }
 
 .home .profession-box .profession:nth-child(3) {
-    transform: rotate(360deg) translateY(40px) rotate(-270deg);
+    transform: rotate(360deg) translate(20px) translateY(25px) rotate(-270deg);
 }
 
 .home .profession-box .profession:nth-child(4) {
-    transform: rotate(270deg) translate(0) rotate(-360deg);
+    transform: rotate(270deg) translate(-10px) translateY(-10px) rotate(-360deg);
 }
 
 
@@ -299,8 +298,8 @@ transform: rotate(90deg) translateY(-410px) rotate(90deg)
 }
 
 .home .profession-box .circle {
-    width: 78%;
-    height: 78%;
+    width: 584px;
+    height: 584px;
     border: 3px solid var(--main-color);
     border-radius: 50%;
 }
@@ -311,10 +310,10 @@ transform: rotate(90deg) translateY(-410px) rotate(90deg)
     right: 0;
     width: 0;
     height: 0;
-    /*border-top: 480px solid var(--main-color);
-    border-right: 457px solid var(--main-color);
-    border-bottom: 457px solid var(--main-color) ;
-    border-left: 457px solid transparent;*/
+    border-top: 450px solid var(--main-color);
+    border-right: 450px solid var(--main-color);
+    border-bottom: 450px solid var(--main-color) ;
+    border-left: 510px solid transparent;
 }
 
 .home .profession .overlay{
@@ -416,7 +415,7 @@ span {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    padding: 0 4rem;
+    padding: 0 2rem;
     opacity: 0;
     transition: .5s ease;
 }
@@ -427,6 +426,7 @@ span {
 
 .projects-first-layer h4 {
     font-size: 3rem;
+    line-height: 40px;
 }
 
 .projects-first-layer p {
@@ -435,19 +435,21 @@ span {
 }
 
 .projects-first-layer a {
+    cursor: pointer;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 11rem;
-    height: 5rem;
-    background: var(--white-color);
+    width: 13rem;
+    height: 6rem;
+    background: var(--bg-color);
     border-radius: 50%;
     gap: 0.6rem;
+    color: var(--main-color);
 }
 
 .projects-first-layer a i {
     font-size: 2rem;
-    color: #333;
+    color: var(--main-color);
 }
 
 .projects-modal {
@@ -457,21 +459,18 @@ span {
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, .6);
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     padding: 0 1rem;
     z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
 }
 
 .projects-modal-content {
     position: relative;
     background-color: var(--bg-color);
     padding: 1.5rem;
-    border-radius: .5rem;
-
+    border-radius: 1rem;
 }
 
 .projects-modal-project {
@@ -481,19 +480,22 @@ span {
 .projects-modal-project {
     display: flex;
     gap: 10px;
+    color: var(--text-color);
+    margin-bottom: .5rem;
 }
 
 .projects-modal-title {
-    font-size: 3rem;
-    font-weight: 400;
-    margin-bottom: 1.5rem;
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: var(--main-color);
 }
 
 .projects-modal-close {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     color: var(--main-color);
     cursor: pointer;
 }
@@ -503,10 +505,13 @@ span {
     margin-right: .25rem;
 }
 
-/* Active Modal */
-.active-modal {
-    opacity: 1;
-    visibility: visible;
+.projects-modal-project-grid {
+    color: var(--text-color);
+}
+
+/* Active Modal*/
+.projects-modal.active-modal {
+    display: flex;
 }
 
 
@@ -871,22 +876,29 @@ span {
     }
 }
 
+@media screen and (max-width: 767px) {
+    .projects-modal-content {
+        width: 100%;
+        max-width: 500px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .projects-modal-content {
+        width: 70%;
+        max-width: 800px;
+    }
+}
 
 
 
 
 
-
-
-
-
-
-
-#skills {
+.skills {
     padding-bottom: 50px;
 }
 
-#skills h2 {
+.skills h2 {
     text-align: center;
     font-size: 6rem;
     margin: 0 0 30px 0;

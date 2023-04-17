@@ -65,3 +65,21 @@ ScrollReveal().reveal('.home-content, .heading', { origin: 'top'});
 ScrollReveal().reveal('.home-img img, .services-container, .projects-box, .contact form', { origin: 'bottom'});
 ScrollReveal().reveal('.home-content h1, .about-img img', { origin: 'left'});
 ScrollReveal().reveal('.home-content h3, .home-content p, .about-content', { origin: 'right'});
+
+
+/*============= Modal Project =============*/
+
+const projectBoxes = document.querySelectorAll('.projects-box-class');
+const modal = document.querySelector('.projects-modal');
+const closeButton = modal.querySelector('.projects-modal-close');
+
+projectBoxes.forEach((box) => {
+    const seeMoreButton = box.querySelector('a');
+    seeMoreButton.addEventListener('click', () => {
+        modal.classList.add('active-modal');
+    });
+});
+
+closeButton.addEventListener('click', () => {
+    modal.classList.remove('active-modal');
+});
