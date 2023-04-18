@@ -444,15 +444,15 @@ span {
     background: var(--bg-color);
     border-radius: 50%;
     gap: 0.6rem;
-    color: var(--main-color);
+    color: var(--text-color);
 }
 
 .projects-first-layer a i {
     font-size: 2rem;
-    color: var(--main-color);
+    color: var(--text-color);
 }
 
-.projects-modal {
+#modal.projects-modal {
     position: fixed;
     top: 0;
     left: 0;
@@ -469,7 +469,7 @@ span {
 .projects-modal-content {
     position: relative;
     background-color: var(--bg-color);
-    padding: 1.5rem;
+    padding: 2rem;
     border-radius: 1rem;
 }
 
@@ -510,7 +510,7 @@ span {
 }
 
 /* Active Modal*/
-.projects-modal.active-modal {
+#modal.projects-modal.active-modal {
     display: flex;
 }
 
@@ -812,19 +812,26 @@ span {
         margin-top: -2rem;
     }
 
-    .services h2,
+    /*.services h2,
     .projects-main-section h2 {
         margin-bottom: 3rem;
-    }
+    }*/
 
-    .projects-main-section .projects-container {
+    .projects-main-section .projects-container-class {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 617px) {
-    .projects-main-section .projects-container {
+    .projects-main-section .projects-container-class {
         grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 1919px) {
+    .projects-first-layer h4,
+    .projects-first-layer p {
+        display: none;
     }
 }
 

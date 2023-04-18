@@ -69,7 +69,7 @@ ScrollReveal().reveal('.home-content h3, .home-content p, .about-content', { ori
 
 /*============= Modal Project =============*/
 
-const projectBoxes = document.querySelectorAll('.projects-box-class');
+/*const projectBoxes = document.querySelectorAll('.projects-box-class');
 const modal = document.querySelector('.projects-modal');
 const closeButton = modal.querySelector('.projects-modal-close');
 
@@ -82,4 +82,23 @@ projectBoxes.forEach((box) => {
 
 closeButton.addEventListener('click', () => {
     modal.classList.remove('active-modal');
+});*/
+
+const projectBoxes = document.querySelectorAll('.projects-box-class');
+const modalList = document.querySelectorAll('.projects-modal');
+const closeButtons = document.querySelectorAll('.projects-modal-close');
+
+projectBoxes.forEach((box, index) => {
+    const seeMoreButton = box.querySelector('a');
+    const modal = modalList[index];
+    const closeButton = closeButtons[index];
+
+    seeMoreButton.addEventListener('click', () => {
+        modal.classList.add('active-modal');
+    });
+
+    closeButton.addEventListener('click', () => {
+        modal.classList.remove('active-modal');
+    });
 });
+
