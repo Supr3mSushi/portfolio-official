@@ -41,9 +41,6 @@ window.onscroll = () => {
 //     header.classList.toggle('sticky', window.scrollY > 100);
 // }
 
-
-
-
 let header = document.querySelector("header");
 header.classList.toggle('sticky', window.scrollY > 100);
 
@@ -100,4 +97,40 @@ projectBoxes.forEach((box, index) => {
         modal.classList.remove('active-modal');
     });
 });
+
+
+/*============= Popup =============*/
+
+// Get the guest book popup
+let guestBookPopup = document.querySelector('.guest-book-popup');
+
+// Get the button that opens the guest book popup
+let guestBookBtn = document.querySelector('.guest-book-btn');
+
+// Get the <span> element that closes the guest book popup
+let guestBookClose = document.getElementsByClassName('guest-book-close')[0];
+
+// When the user clicks on the button, open the guest book popup
+guestBookBtn.onclick = function() {
+    guestBookPopup.style.display = 'block';
+}
+
+// When the user clicks on <span> (x), close the guest book popup
+guestBookClose.onclick = function() {
+    guestBookPopup.style.display = 'none';
+}
+
+// When the user clicks anywhere outside the guest book popup, close it
+window.onclick = function(event) {
+    if (event.target === guestBookPopup) {
+        guestBookPopup.style.display = 'none';
+    }
+}
+
+
+
+
+
+
+
 

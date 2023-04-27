@@ -240,7 +240,6 @@ section {
     }
 }
 
-
 .home .profession-box .profession {
     position: absolute;
     left: 0;
@@ -266,19 +265,19 @@ section {
 }
 
 .home .profession-box .profession:nth-child(1) {
-    transform: rotate(90deg) translate(-20px) translateY(-10px) rotate(-90deg);
+    transform: rotate(90deg) translate(-30px) rotate(-90deg);
 }
 
 .home .profession-box .profession:nth-child(2) {
-transform: rotate(90deg) translate(15px) translateY(40px) rotate(90deg);
+transform: rotate(90deg) translate(20px) translateY(30px) rotate(90deg);
 }
 
 .home .profession-box .profession:nth-child(3) {
-    transform: rotate(360deg) translate(15px) translateY(40px) rotate(-270deg);
+    transform: rotate(360deg) translate(25px) translateY(30px) rotate(-270deg);
 }
 
 .home .profession-box .profession:nth-child(4) {
-    transform: rotate(270deg) translate(10px) translateY(-20px) rotate(-360deg);
+    transform: rotate(270deg) translate(-10px) translateY(-20px) rotate(-360deg);
 }
 
 
@@ -306,7 +305,7 @@ transform: rotate(90deg) translate(15px) translateY(40px) rotate(90deg);
     right: 0;
     width: 0;
     height: 0;
-    border-top: 447px solid var(--main-color);
+    border-top: 410px solid var(--main-color);
     border-right: 440px solid var(--main-color);
     border-bottom: 490px solid var(--main-color) ;
     border-left: 510px solid transparent;
@@ -555,6 +554,94 @@ span {
 }
 
 
+/* ===================== Guest Book Pop-up ===================== */
+
+.guest-book {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.guest-book-btn {
+    font-size: 50px;
+    padding: 17px 17px;
+    margin: 0 0 -10px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+    display: inline-flex;
+    background: var(--text-color);
+    color: var(--bg-color);
+    box-shadow: 0 .2rem .5rem var(--shadow-color);
+    align-items: center;
+    font-weight: bold;
+}
+
+.guest-book-popup {
+    display: none;
+    position: fixed;
+    bottom: 105px;
+    right: 105px;
+    width: 350px;
+    background: var(--bg-color);
+    border-radius: 10px;
+    box-shadow: 0 0 50px var(--shadow-color);
+    line-height: 7rem;
+}
+
+.guest-book-popup.show {
+    display: block;
+}
+
+.guest-book-content {
+    padding: 20px;
+}
+
+.guest-book-close {
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.guest-book-close:hover {
+    color: #999;
+}
+
+.guest-book-heading {
+    margin: 0;
+}
+
+.input-box-popup {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 5px 5px 25px var(--shadow-color);
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 5px;
+    font-weight: bold;
+    background: var(--main-color);
+    color: var(--white-color);
+    font-size: 1.6rem;
+    box-shadow: 0 .2rem .5rem var(--shadow-color);
+    border: .2rem solid transparent;
+}
+
+
 /* ===================== Footer ===================== */
 
 .footer {
@@ -569,6 +656,7 @@ span {
 .footer-text p {
     font-size: 1.6rem;
     color: var(--white-color);
+    font-weight: bold;
 }
 
 .footer-iconTop a {
@@ -597,7 +685,7 @@ span {
 
 @media (max-width: 1919px) {
     .header {
-        padding: 3rem 20% 3rem 5%;
+        padding: 3rem 10% 3rem 5%;
     }
 
     section { /*jeu scroll*/
@@ -673,7 +761,7 @@ span {
 
 @media (max-width: 1024px) {
     .header {
-        padding: 3rem 23% 3rem 6%;
+        padding: 3rem 10% 3rem 6%;
     }
 
     section { /*jeu scroll*/
@@ -866,6 +954,19 @@ span {
 
     .projects-main-section .projects-container-class {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .guest-book {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .guest-book-popup {
+        bottom: 60px;
+        right: 10px;
+        width: calc(100% - 20px);
     }
 }
 
