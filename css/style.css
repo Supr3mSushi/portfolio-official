@@ -47,7 +47,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 2rem 10%;
+    padding: 2rem 7%;
     background: transparent;
     display: flex;
     align-items: center;
@@ -541,7 +541,7 @@ span {
 }
 
 .contact form .input-box input {
-    width: 49%;
+    width: 50%;
 }
 
 .contact form textarea {
@@ -581,13 +581,14 @@ span {
 .guest-book-popup {
     display: none;
     position: fixed;
-    bottom: 105px;
-    right: 105px;
-    width: 350px;
+    bottom: 20px;
+    right: 115px;
+    width: 500px;
     background: var(--bg-color);
     border-radius: 10px;
     box-shadow: 0 0 50px var(--shadow-color);
-    line-height: 7rem;
+    line-height: 5rem;
+    top: 105px;
 }
 
 .guest-book-popup.show {
@@ -619,6 +620,7 @@ span {
 
 input[type="text"],
 input[type="email"],
+input[type="number"],
 textarea {
     width: 100%;
     padding: 10px 20px;
