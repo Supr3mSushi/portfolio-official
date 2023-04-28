@@ -311,7 +311,7 @@ transform: rotate(90deg) translate(20px) translateY(30px) rotate(90deg);
     right: 0;
     width: 0;
     height: 0;
-    border-top: 410px solid var(--main-color);
+    border-top: 394px solid var(--main-color);
     border-right: 440px solid var(--main-color);
     border-bottom: 490px solid var(--main-color) ;
     border-left: 510px solid transparent;
@@ -547,7 +547,7 @@ span {
 }
 
 .contact form .input-box input {
-    width: 50%;
+    width: 49%;
 }
 
 .contact form textarea {
@@ -661,7 +661,7 @@ input[type="submit"] {
     background: var(--main-color);
 }
 
-.footer-text p {
+.footer-text a {
     font-size: 1.6rem;
     color: var(--white-color);
     font-weight: bold;
@@ -697,7 +697,7 @@ input[type="submit"] {
     }
 
     section { /*jeu scroll*/
-        padding: 10rem 20% 2rem 7%;
+        padding: 10rem 4% 2rem 4%;
     }
 
     .home .profession-container .profession-box {
@@ -741,7 +741,7 @@ input[type="submit"] {
     }
 
     .footer {
-        padding: 0 20% 0 5%;
+        padding: 0 10% 0 5%;
     }
 
     .footer p {
@@ -787,7 +787,7 @@ input[type="submit"] {
 
 @media (max-width: 991px) {
     section {
-        padding: 10rem 22% 2rem 7%;
+        padding: 10rem 5% 2rem 5%;
     }
 
     .navbar a.active::before{
@@ -830,14 +830,14 @@ input[type="submit"] {
     }
 
     .footer {
-        padding: 2rem 20% 1rem 6%;
+        padding: 2rem 15% 1rem 6%;
     }
 }
 
 
 @media (max-width: 768px) {
     section {
-        padding: 10rem 24% 2rem 7%;
+        padding: 10rem 7% 2rem 7%;
     }
 
     #menu-icon {
@@ -889,7 +889,7 @@ input[type="submit"] {
     }
 
     .home {
-        padding: 0 3% 23rem 0;
+        padding: 0px 0% 23rem 55px;
         justify-content: center;
         text-align: center;
     }
