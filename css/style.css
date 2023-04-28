@@ -33,10 +33,16 @@ html {
     overflow-x: hidden;
 }
 
-body {
+body,td,th {
     background: var(--bg-color);
     color: var(--text-color);
     font-size: 1.6rem;
+}
+
+canvas {
+    background: var(--bg-color);
+    display: block;
+    margin: 0 auto;
 }
 
 
